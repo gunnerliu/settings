@@ -75,10 +75,11 @@ bindsym $mod+c exec --no-startup-id chromium --explicitly-allowed-ports=10080,80
 bindsym $mod+l exec --no-startup-id i3lock -i /home/archliu/documents/images/lock_bg.png
 
 # custom auto start
-exec_always --no-startup-id ~/.config/polybar/launch.sh --cuts
 exec_always --no-startup-id qv2ray
-exec_always --no-startup-id picom -b
 exec_always --no-startup-id fcitx
+exec --no-startup-id xrandr --output HDMI3 --auto --rotate left --output HDMI1 --auto --pos 1200x0 --right-of HDMI3 --primary
+exec_always --no-startup-id ~/.config/polybar/launch.sh --cuts
+exec_always --no-startup-id picom -b
 exec_always --no-startup-id feh --bg-fill ~/documents/images/bg.jpg
 exec_always --no-startup-id xset s 0
 exec_always --no-startup-id xset dpms 0 0 0
