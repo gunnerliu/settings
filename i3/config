@@ -72,7 +72,7 @@ bindsym $mod+d exec --no-startup-id rofi -show drun
 
 # custom key bind
 bindsym $mod+c exec --no-startup-id chromium --explicitly-allowed-ports=10080,8000
-bindsym $mod+l exec --no-startup-id i3lock -i /home/archliu/documents/images/lock_bg.png
+bindsym $mod+l exec --no-startup-id i3lock -i /home/archliu/documents/images/lock.png -c 000000
 
 # custom auto start
 exec_always --no-startup-id qv2ray
