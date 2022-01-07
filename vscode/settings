@@ -1,0 +1,142 @@
+{
+    // ================================  vscode =============================
+    // 隐藏 menubar
+    "window.menuBarVisibility": "hidden",
+    // "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    // "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Source Han Sans CN'",
+    // ================================ 编辑器相关 ============================
+    "editor.tabSize": 4,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "[sql]": {
+        "editor.formatOnSave": false
+    },
+    "editor.minimap.maxColumn": 50,
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.renderCharacters": false,
+    "workbench.editor.enablePreview": false,
+    "editor.smoothScrolling": true,
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": true,
+    "explorer.compactFolders": false,
+    "workbench.startupEditor": "none",
+    "debug.console.fontSize": 12,
+    "workbench.editorAssociations": {
+        "*.md": "default"
+    },
+    "redhat.telemetry.enabled": false,
+    "telemetry.telemetryLevel": "off",
+    "sonarlint.disableTelemetry": true,
+    "rest-client.enableTelemetry": false,
+    // ================================ java 相关 ============================
+    "java.format.settings.profile": "Eclipse",
+    "java.format.settings.url": "https://raw.githubusercontent.com/gunnerliu/settings/main/code-formatter/eclipse-java-formatter.xml",
+    "java.maven.downloadSources": true,
+    "java.configuration.maven.userSettings": "/opt/maven/config/settings.xml",
+    "java.configuration.maven.globalSettings": "/opt/maven/config/settings.xml",
+    "maven.executable.path": "/opt/maven/bin/mvn",
+    "java.autobuild.enabled": false,
+    "java.project.importOnFirstTimeStartup": "disabled",
+    "java.maven.updateSnapshots": true,
+    "java.eclipse.downloadSources": true,
+    "java.maxConcurrentBuilds": 2,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx16G -Xms100m -javaagent:\"/home/archliu/.vscode-oss/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
+    "todo-tree.tree.showScanModeButton": false,
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-11",
+            "path": "/usr/lib/jvm/java-11-openjdk",
+        },
+        {
+            "name": "JavaSE-1.8",
+            "path": "/usr/lib/jvm/java-8-jdk",
+            // "sources": "~/worksapce/jdk/sources/jdk-687fd7c7986d.zip",
+            "default": true
+        }
+    ],
+    "workbench.colorTheme": "One Dark Pro",
+    "sonarlint.ls.javaHome": "/usr/lib/jvm/java-11-openjdk",
+    "spring-boot.ls.java.home": "/usr/lib/jvm/java-11-openjdk",
+    "sonarlint.rules": {
+        "java:S3740": {
+            "level": "off"
+        },
+        "java:S1452": {
+            "level": "off"
+        },
+        "java:S114": {
+            "level": "off"
+        },
+        "java:S1192": {
+            "level": "off"
+        },
+        "java:S100": {
+            "level": "off"
+        },
+        "java:S5993": {
+            "level": "off"
+        },
+        "java:S101": {
+            "level": "off"
+        },
+        "java:S116": {
+            "level": "off"
+        },
+        "java:S117": {
+            "level": "off"
+        },
+        "java:S2055": {
+            "level": "off"
+        }
+    },
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "explorer.confirmDragAndDrop": false,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "explorer.confirmDelete": false,
+    // ================================ C/C++ =====================================
+    "C_Cpp.clang_format_fallbackStyle": "Google",
+    "[c]": {
+        "editor.wordBasedSuggestions": false,
+        "editor.suggest.insertMode": "replace",
+        "editor.semanticHighlighting.enabled": true,
+        "editor.tabSize": 2
+    },
+    "cmake.saveBeforeBuild": false,
+    "cmake.configureOnOpen": true,
+    // ================================ other =====================================
+    "breadcrumbs.enabled": true,
+    // ================================ VUE =====================================
+    "vetur.format.enable": true,
+    "[vue]": {
+        "gitlens.codeLens.scopes": [
+            "document"
+        ],
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "octref.vetur"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "sync.gist": "27d0cfdc2839e81e020935a0ce35f263",
+    "search.followSymlinks": false,
+    "git.autorefresh": true,
+    "files.autoSave": "afterDelay",
+}
