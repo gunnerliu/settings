@@ -1,4 +1,5 @@
-// =============================== vscode 相关 ==========================
+{
+  // =============================== vscode 相关 ==========================
   "workbench.startupEditor": "none",
   "window.menuBarVisibility": "hidden",
   "editor.minimap.maxColumn": 50,
@@ -7,6 +8,7 @@
   "debug.console.fontSize": 12,
   "explorer.confirmDragAndDrop": false,
   "extensions.autoUpdate": false,
+  "debug.allowBreakpointsEverywhere": true,
   "http.proxy": "http://127.0.0.1:8889",
   // =============================== 格式化相关设置 ==========================
   "editor.tabSize": 4,
@@ -14,13 +16,14 @@
   "editor.suggest.insertMode": "replace",
   "files.autoSave": "afterDelay",
   "editor.formatOnSaveMode": "file",
+  // "editor.formatOnSaveMode": "modifications",
   "[sql]": {
     "editor.formatOnSave": false
   },
   "editor.suggest.showFields": true,
   // =============================== java 相关设置 ==========================
   "redhat.telemetry.enabled": false,
-  "java.home": "/usr/lib/jvm/java-11-openjdk",
+  "java.jdt.ls.java.home": "/usr/lib/jvm/java-18-openjdk",
   // 显示方法签名
   "java.signatureHelp.enabled": true,
   "sonarlint.disableTelemetry": true,
@@ -42,6 +45,10 @@
     {
       "name": "JavaSE-11",
       "path": "/usr/lib/jvm/java-11-openjdk"
+    },
+    {
+      "name": "JavaSE-18",
+      "path": "/usr/lib/jvm/java-18-openjdk"
     },
     {
       "name": "JavaSE-1.8",
@@ -123,16 +130,42 @@
     "Appender",
     "archlinux",
     "archliu",
+    "autobuild",
     "beetl",
+    "classpath",
     "Configurer",
+    "Dsun",
+    "dtos",
+    "esbenp",
+    "factorypath",
+    "FEISHU",
+    "gabrielbb",
     "homekit",
+    "Infr",
     "iots",
+    "javaagent",
+    "Jsdelivr",
     "JVMGC",
+    "leetcode",
     "logback",
     "Millis",
     "mybatis",
     "Nonheap",
+    "octref",
+    "pdfs",
     "Pointcut",
+    "runtimes",
     "Servlet",
-    "unhandle"
-  ]
+    "sonarlint",
+    "unhandle",
+    "vetur",
+    "vmargs",
+    "worksapce"
+  ],
+  "leetcode.endpoint": "leetcode-cn",
+  "leetcode.hint.configWebviewMarkdown": false,
+  "leetcode.workspaceFolder": "/home/archliu/.leetcode",
+  "leetcode.hint.commentDescription": false,
+  "leetcode.defaultLanguage": "java",
+  "leetcode.hint.commandShortcut": false
+}
