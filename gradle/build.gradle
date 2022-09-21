@@ -5,7 +5,6 @@ buildscript {
 		maven { url 'https://maven.aliyun.com/repository/google' }
 		maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
 		google()
-		jcenter()
 	}
 }
 
@@ -30,13 +29,11 @@ allprojects {
 		maven { url 'https://maven.aliyun.com/repository/google' }
 		maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
 		google()
-		jcenter()
 	}
 }
 
 def createDir={
 	path ->
-		println group
 		def dirPath = project.projectDir.getAbsolutePath() + path
 		File dir = new File(dirPath)
 		if(!dir.exists()) {
@@ -45,11 +42,48 @@ def createDir={
 		}
 }
 
+def initPackage() {
+	def pPath = project.projectDir.getAbsolutePath() + '/src/main/java';
+	String[] strs = (group + '.app').split('\\.');
+	for(String str : strs){
+		pPath += "/" + str;
+		File pFileDir = new File(pPath)
+		if(!pFileDir.exists()) {
+			pFileDir.mkdirs();
+			println pPath + ' mkdir done'
+		}
+	}
+
+	// 创建 Application.java 启动类
+	new File(pPath + '/Application.java',).withWriter('utf-8') {
+		writer -> {
+			writer.writeLine('package ' + group + '.app;')
+			writer.writeLine('')
+			writer.writeLine('import org.springframework.boot.SpringApplication;')
+			writer.writeLine('import org.springframework.boot.autoconfigure.SpringBootApplication;')
+			writer.writeLine('')
+			writer.writeLine('@SpringBootApplication')
+			writer.writeLine('public class Application {')
+			writer.writeLine('')
+			writer.writeLine('	public static void main(String[] args) {')
+			writer.writeLine('		SpringApplication.run(Application.class, args);')
+			writer.writeLine('	}')
+			writer.writeLine('')
+			writer.writeLine('}')
+		}
+	}
+}
+
+def initApplication () {
+	File appFile = new File(project.projectDir.getAbsolutePath() + '/src/main/java/Application')
+}
+
 task makeJavaDir() {
 	def paths = ['/src/main/java', '/src/main/resources', '/src/test/java', '/src/test/resources']
 	// 创建路径
 	paths.forEach(createDir)
 	// 创建 SpringBoot 的配置文件、启动类
+	initPackage()
 	// 拉取 .gitignore
 	// 拉取 gradle.properties 文件
 	// 拉取 .gitlab-ci.yml 文件
