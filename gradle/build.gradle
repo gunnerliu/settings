@@ -1,0 +1,57 @@
+buildscript {
+	repositories {
+		maven { url 'https://maven.aliyun.com/repository/central' }
+		maven { url 'https://maven.aliyun.com/repository/jcenter' }
+		maven { url 'https://maven.aliyun.com/repository/google' }
+		maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+		google()
+		jcenter()
+	}
+}
+
+plugins {
+	id 'org.springframework.boot' version '2.7.3'
+}
+
+group 'cn.archliu'
+version '1.0.0'
+
+apply plugin: 'java'
+apply plugin: 'io.spring.dependency-management'
+
+dependencies {
+	implementation('org.springframework.boot:spring-boot-starter-web')
+}
+
+allprojects {
+	repositories {
+		maven { url 'https://maven.aliyun.com/repository/central' }
+		maven { url 'https://maven.aliyun.com/repository/jcenter' }
+		maven { url 'https://maven.aliyun.com/repository/google' }
+		maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+		google()
+		jcenter()
+	}
+}
+
+def createDir={
+	path ->
+		println group
+		def dirPath = project.projectDir.getAbsolutePath() + path
+		File dir = new File(dirPath)
+		if(!dir.exists()) {
+			dir.mkdirs();
+			println path + ' mkdir done'
+		}
+}
+
+task makeJavaDir() {
+	def paths = ['/src/main/java', '/src/main/resources', '/src/test/java', '/src/test/resources']
+	// 创建路径
+	paths.forEach(createDir)
+	// 创建 SpringBoot 的配置文件、启动类
+	// 拉取 .gitignore
+	// 拉取 gradle.properties 文件
+	// 拉取 .gitlab-ci.yml 文件
+	// 创建 README.md 文件
+}
