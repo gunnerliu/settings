@@ -1,0 +1,17 @@
+{
+	"Mysql Create Table": {
+		"scope": "sql",
+		"prefix": "ct",
+		"body": [
+			"create table if not exists `$1`",
+			"(",
+			"   `id`                     bigint      unsigned  AUTO_INCREMENT PRIMARY KEY,",
+			"   `created_time`           datetime              DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',",
+			"   `created_by`             VARCHAR(255)          DEFAULT 'system' COMMENT '创建者',",
+			"   `last_update_time`       datetime              DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '最后更新时间',",
+			"   `last_update_by`         VARCHAR(255)          DEFAULT 'system' COMMENT '最后更新者'",
+			") ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COMMENT ='$2';",
+		],
+		"description": "Log output to console"
+	}
+}
