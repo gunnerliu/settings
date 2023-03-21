@@ -1,0 +1,20 @@
+{
+	"vue": {
+		"scope": "vue",
+		"prefix": "vue",
+		"body": [
+			"<script setup lang=\"ts\">",
+			"",
+			"</script>",
+			"",
+			"<template>",
+			"$1",
+			"</template>",
+			"",
+			"<style scoped>",
+			"",
+			"</style>"
+		],
+		"description": "Log output to console"
+	}
+}
