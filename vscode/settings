@@ -9,12 +9,13 @@
   "explorer.confirmDragAndDrop": false,
   "extensions.autoUpdate": false,
   "debug.allowBreakpointsEverywhere": true,
-  "http.proxy": "http://127.0.0.1:8889",
+  // "http.proxy": "http://127.0.0.1:8889",
   // =============================== 格式化相关设置 ==========================
   "editor.tabSize": 4,
   "editor.formatOnSave": true,
   "editor.suggest.insertMode": "replace",
-  "files.autoSave": "afterDelay",
+  // "files.autoSave": "afterDelay",
+  "files.autoSave": "onFocusChange",
   "editor.formatOnSaveMode": "file",
   // "editor.formatOnSaveMode": "modifications",
   "[sql]": {
@@ -22,16 +23,13 @@
   },
   "editor.suggest.showFields": true,
   // =============================== java 相关设置 ==========================
-  "redhat.telemetry.enabled": false,
-  "java.jdt.ls.java.home": "/usr/lib/jvm/java-18-openjdk",
+  "java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk",
+  "java.import.gradle.home": "/usr/bin/gradle",
   // 显示方法签名
   "java.signatureHelp.enabled": true,
-  "sonarlint.disableTelemetry": true,
   "java.format.settings.profile": "Eclipse",
   "java.format.settings.url": "https://raw.githubusercontent.com/gunnerliu/settings/main/code-formatter/eclipse-java-formatter.xml",
   "java.maven.downloadSources": true,
-  "java.configuration.maven.userSettings": "/opt/maven/config/settings.xml",
-  "java.configuration.maven.globalSettings": "/opt/maven/config/settings.xml",
   "java.autobuild.enabled": false,
   "java.project.importOnFirstTimeStartup": "disabled",
   "java.maven.updateSnapshots": true,
@@ -40,59 +38,17 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
   },
-  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx16G -Xms100m -javaagent:\"/home/archliu/.vscode-oss/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
   "java.configuration.runtimes": [
     {
       "name": "JavaSE-11",
       "path": "/usr/lib/jvm/java-11-openjdk"
     },
     {
-      "name": "JavaSE-18",
-      "path": "/usr/lib/jvm/java-18-openjdk"
-    },
-    {
-      "name": "JavaSE-1.8",
-      "path": "/usr/lib/jvm/java-8-jdk",
-      // "sources": "~/worksapce/jdk/sources/jdk-687fd7c7986d.zip",
+      "name": "JavaSE-17",
+      "path": "/usr/lib/jvm/java-17-openjdk",
       "default": true
-    }
+    },
   ],
-  "sonarlint.ls.javaHome": "/usr/lib/jvm/java-11-openjdk",
-  "sonarlint.rules": {
-    "java:S3740": {
-      "level": "off"
-    },
-    "java:S1452": {
-      "level": "off"
-    },
-    "java:S114": {
-      "level": "off"
-    },
-    "java:S1192": {
-      "level": "off"
-    },
-    "java:S100": {
-      "level": "off"
-    },
-    "java:S5993": {
-      "level": "off"
-    },
-    "java:S101": {
-      "level": "off"
-    },
-    "java:S116": {
-      "level": "off"
-    },
-    "java:S117": {
-      "level": "off"
-    },
-    "java:S2055": {
-      "level": "off"
-    },
-    "java:S3252": {
-      "level": "off"
-    }
-  },
   "files.exclude": {
     "**/.classpath": true,
     "**/.project": true,
@@ -105,9 +61,11 @@
   // =============================== VUE 相关设置 ==========================
   "vetur.format.enable": true,
   "[vue]": {
-    "gitlens.codeLens.scopes": ["document"],
+    // "gitlens.codeLens.scopes": [
+    //   "document"
+    // ],
     "editor.tabSize": 2,
-    "editor.defaultFormatter": "octref.vetur",
+    "editor.defaultFormatter": "Vue.volar",
     "editor.codeActionsOnSave": {
       "source.organizeImports": false
     }
@@ -121,7 +79,8 @@
   "[typescript]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports": false
-    }
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   // ============================== other ===================================
   "markdown-pdf.outputDirectory": "/home/archliu/documents/file/ArchLiu/resume/pdfs/",
@@ -162,10 +121,8 @@
     "vmargs",
     "worksapce"
   ],
-  "leetcode.endpoint": "leetcode-cn",
-  "leetcode.hint.configWebviewMarkdown": false,
-  "leetcode.workspaceFolder": "/home/archliu/.leetcode",
-  "leetcode.hint.commentDescription": false,
-  "leetcode.defaultLanguage": "java",
-  "leetcode.hint.commandShortcut": false
+  "boot-java.rewrite.reconcile": true,
+  "window.zoomLevel": 1,
+  "redhat.telemetry.enabled": true,
+  "editor.linkedEditing": true
 }
